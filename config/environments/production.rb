@@ -82,8 +82,8 @@ config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
     :bucket => "hottestgirlsintheworld",
-    :access_key_id => ENV['AKIAJ7VP4SLD6JYOTXHQ'],
-    :secret_access_key => ENV['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']
+    :access_key_id => "AKIAJ7VP4SLD6JYOTXHQ",
+    :secret_access_key => "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"
   }
 }
 end
