@@ -21,6 +21,7 @@ class PinsController < ApplicationController
   end
 
   def edit
+    @pin = current_user.pins.find(params[:id])
   end
 
   def create
@@ -30,11 +31,13 @@ class PinsController < ApplicationController
   end
 
   def update
+    @pin = current_user.pins.find(params[:id])
     @pin.update(pin_params)
     respond_with(@pin)
   end
 
   def destroy
+    @pin = current_user.pins.find(params[:id])
     @pin.destroy
     respond_with(@pin)
   end
@@ -45,6 +48,6 @@ class PinsController < ApplicationController
     end
 
     def pin_params
-      params.require(:pin).permit(:description)
+      params.require(:pin).permit(:description, :image)
     end
 end
